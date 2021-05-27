@@ -1,0 +1,130 @@
+/*HOJA DE ESTILO PARA LA PAGINA ARDUINO*/
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: #f3f8f7;
+	background-image: url(https://images.pexels.com/photos/950241/pexels-photo-950241.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+}
+
+p{
+    margin: 0;
+	padding: 0;
+}
+
+h2 {
+	margin: 5px;
+}
+
+header,
+footer {
+	width: 100%;
+	margin: 15px auto;
+	max-width: 1000px;
+}
+
+.main{
+	width: 100%;
+	margin: 15px auto;
+	max-width: 1000px;
+}
+
+.main .articles {
+	background-color: #fffb004b;
+	text-align: center;
+	border: 1px solid rgb(0, 0, 0);
+}
+
+.p_contacto {
+	background-image: url(https://image.freepik.com/vector-gratis/fondo-abstracto-blanco-estilo-papel-3d_23-2148390818.jpg);
+	background-size: 1000px;
+}
+
+.main .articles .p_contacto {
+	font-family: 'Courier New', Courier, monospace;
+	padding: 15px;
+	width: 97%;
+	display: inline-block;
+}
+
+.cont{
+	font-size: 55px;
+}
+
+.dts {
+	font-weight: bolder;
+}
+
+header nav {
+	background: #528fd5;
+	overflow: hidden;
+}
+
+header nav ul li {
+	list-style: none;
+}
+
+.nav1 > li {
+	float: left;
+}
+
+.nav1 li a {
+	background-color: #528fd5;
+	color: #f3f8f7;
+	font-family: Arial, Helvetica, sans-serif;
+	text-decoration: none;
+	padding: 15px 15px;
+	height: 15px;
+	/*margin: 2px;*/
+	display: block;
+}
+
+.nav1 li a:hover {
+	background-color: #ff8000;
+	/*margin-top: -1px;*/
+}
+
+.nav1 li ul {
+	/*con display: none desaparecemos los submenus y...*/
+	display: none;
+	position: absolute;
+	min-width: 140px;
+}
+
+.nav1 li:hover > ul {
+	/*con display: block y hover aparecemos los submenus*/
+	display: block;
+}
+
+.nav1 li a:active {
+	box-shadow: 1px 1px 5px 1px #000;
+}
+
+.nav1 li ul li {
+	position: relative;
+}
+
+.nav1 li ul li ul {
+	right: -140px;
+	top: 0px;
+}
+
+.inicio {
+	float: left;
+}
+
+/*p {
+	white-space: pre-line;
+}*/
+
+
+footer {
+	background: #000;
+	color: #f3f8f7;
+	clear: both;
+	padding: 10px 0px;
+	text-align: center;
+}

@@ -1,0 +1,354 @@
+/*HOJA DE ESTILO PARA LA PAGINA PRINCIPAL*/
+
+* {
+	/* agregamos un "SELECTOR UNIVERSAL"  */
+	margin: 0; /* todos los elementos tendran un MARGIN de 0*/
+	padding: 0; /* y tambien al padding */
+	/* esto hace que se elimine todos los margenes que agregar por defecto el navegador*/
+}
+
+body {
+	background-image: url("Blog_cursos/imagenes/fondo2.png");
+}
+
+h3 {
+	text-align: center;
+}
+
+/* queremos que nuestro sitio wen tenga un medida especifica y centremos todo el contenido */
+
+header,
+.main,
+footer {
+	/* estas caracteristicas se las aplicamos con una (,) separandolos hacia header, la clase: main y la etiqueta footer */
+	/*background: #fff;*/
+	width: 100%; /* al ponerle el tamaño en porcentaje y un usuario lo ve desde el celular este adaptara a su pantalla */
+	/*esto se usa para el diseño responsivo / adaptable*/
+	margin: 15px auto; /* con esto centraremos el contenido
+                     pero le ponemos "20px con auto" (de arriba hacia abajo) para tengan un margen y separe cada area "con margen de 20 x" (header, main y footer) */
+	/* tenemos margenes a los lados izquierda y derecha, porque? porque este contenido ese el 90% del tamaño nuestra pagina
+                y es demasiado, yo no quiero que sea del 90%, entonces el aplicamos la propiedad max-width: 1000px*/
+	max-width: 1000px; /* y el tamaño maximo sera de 1000px
+                        y esta caracteristica se la vamos a aplicar tanto al HEADER, MAIN Y FOOTER*/
+}
+
+/* MENU DE NAVEGACION */
+header nav {
+	/* vamos a modificar nuestro MENU DE NAVEGACION que esta encerrado en un .NAV y esta dentro del .HEADER*/
+	background: rgb(42, 113, 194); /*color del fondo de la caja */
+	overflow: hidden; /*soluciona el problema del fondo desaparecido del MENU DE NAVEGACION y los demas elementos tambien se soluciona
+                           OVERFLOW: HIDDEN sirve para dos cosas:
+                           una para ocultar el contenido que sobrepasa nuestro contenedor
+                           y la otra limpia nuestros "float": pr ejemplo: si tenemos un "float: left y float: drive en el mismo contenedor" con esto lo limpiamos*/
+}
+
+header nav ul li {
+	list-style: none; /* con esta caracteristica quitamos los puntos */
+}
+
+/*li {
+  top: -5px;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+}*/
+
+/*ul, ol {
+ list-style: none;
+
+}*/
+/*.nav1 {  centramos el menu con este estilo
+  width: 500px;
+  margin: 0 auto;
+}*/
+
+nav .search {
+	float: right;
+	color: black;
+	text-decoration: none;
+	font-size: 30px;
+	padding: 0px 15px;
+	width: 250px;
+}
+
+.boton {
+	float: right;
+	padding: 6px 10px;
+	margin-top: 8px;
+	margin-right: 16px;
+	background: #ddd;
+	font-size: 17px;
+	border: none;
+	cursor: pointer;
+}
+
+.nav1 > li {
+	float: left;
+}
+
+.nav1 li a {
+	background-color: rgb(42, 113, 194);
+	color: #fff;
+	font-family: Arial, Helvetica, sans-serif;
+	text-decoration: none;
+	padding: 15px 15px;
+	height: 15px;
+	/*margin: 2px;*/
+	display: block;
+}
+
+.nav1 li a:hover {
+	background-color: #ff8000;
+	/*margin-top: -1px;*/
+}
+
+.nav1 li ul {
+	/*con display: none desaparecemos los submenus y...*/
+	display: none;
+	position: absolute;
+	min-width: 140px;
+}
+
+.nav1 li:hover > ul {
+	/*con display: block y hover aparecemos los submenus*/
+	display: block;
+}
+
+.nav1 li a:active {
+	box-shadow: 1px 1px 5px 1px #000;
+}
+
+.nav1 li ul li {
+	position: relative;
+}
+
+.nav1 li ul li ul {
+	right: -140px;
+	top: 0px;
+}
+
+/*header nav ul li {
+  float: left;; /* esto hara que todo los elementos de la lista se apilen hacia la izquierda
+}*/
+
+/* VAMOS A TRABAJAR CON LOS ELEMENTOS (a = enlaces) ADENTRO DE LOS "LI" para modificar los enlaces*/
+
+/*header nav ul li a {
+  padding: 10px 20px; permitimos que tenga un "padding" hacia arriba-abajo
+  display: block; con "display: block" permitimos que tenga un padding hacia arriba-abajo
+                     sino le ponemos el "display:block" no funciona el padding en los enlaces, solo funciona hacia los lados (izquierda-derecha)
+  color: #fff;
+  text-decoration: none;  para quitarle el subrayado a los enlaces 
+  font-family: sans-serif;
+}*/
+
+/* le ponemos una pseudo-clase HOVER para cambiarle el fondo al seleccionar el enlace de le menu
+
+.nav1 li a:hover {
+ background: #75ACEC;
+}*/
+
+.main .articles {
+	/* la clase ".articles" (que encierra todo nuestros articulos) dentro de la clase: ".main" */
+	width: 62.5%; /* es el 70% del tamaño de nuestro elemento padre (documento)*/
+	margin-right: 2%; /* le agregamos un "margen=1.5%" para separalo del sidebar y no se vea pegado, pero al poner esta caracteristica
+                               tenemos que restarle al "width que era de 70% a un 68.5%" pues ya no seria del 70% sino que al ponerle un
+                               "margin-right: de valor 1.5%" tenemos que restarle al with, para que en total de un 100% junto el SIDEBAR que es del 30% y hacemos un suma de (68.5% + 1.5% + 30%) = 100% del tamaño de nuestro documento*/
+	float: left; /* hacemos que el contenido se vaya a la izquierda */
+	/*background: #fff; /* color de fondo de la caja de la clase ".articles" */
+}
+
+/* todos los "articulos (con contenido)" > que esten dentro de la clase ".articles" > y este (.articles) este dentro de la clase "main" vamos a configurarlos*/
+.main .articles article {
+	font-family: Arial, Helvetica, sans-serif;
+	padding: 10px;
+	max-width: 720px;
+	background: #fff;
+	margin-bottom: 20px;
+	display: inline-block; /*mantengo dentro todo mis class hijos y asi no se salgan del cuadro*/
+}
+
+article {
+	border: 1px solid #000;
+}
+
+article:hover {
+	border: 1px solid rgb(240, 131, 8);
+	cursor: pointer;
+}
+
+a {
+	text-decoration: none;
+}
+
+/*a:hover{
+  text-decoration: underline;
+}*/
+
+h2:hover {
+	color: #1668c4;
+	cursor: pointer;
+}
+
+.imgArduino {
+	float: right;
+	height: 130px;
+	clear: left;
+}
+
+.imgBD {
+	float: right;
+	height: 130px;
+	clear: left;
+}
+
+.parrafo1 {
+	margin: 8px;
+}
+
+.parrafo2{
+	margin: 9px;
+}
+
+.parrafo3{
+	margin: 9px;
+}
+
+/* ESPECIFICAR EL TAMAÑO DEL "ASIDE" */
+aside {
+	width: 34%; /* le ponemos del 30% que asi sume con el 70% de la clase ".articles" un 100% de todo el tamaño de nuestro documento (elemento padre)*/
+	background: #fff; /* color de fondo de la caja del "aside"*/
+	/* NOTA: con float:left: estamos apilando/poniendo las columnas hacia la izquierda */
+	/*padding: 20px; /* es un padding interno, que hace que el contenedor se mas grande (mas del 30% predeterminado) y lo desplace hacia abajo, pero...usamos:
+                   "box-sizing: border-box" para solucionarlo*/
+	border: 1px solid #000;
+	margin: 0px;
+	padding: 5px;
+	margin-bottom: 25px;
+    /*position: relative;*/
+    overflow: hidden;
+	/*box-sizing: border-box;*/
+}
+
+.social {
+   display: grid;
+   grid-template-columns: repeat(3,1fr);
+}
+
+.social img {
+	width: 95%;
+	margin: 2px;
+}
+
+.net{
+	width: 100%;
+	margin: 3.5px;
+}
+
+.net:hover{
+ border: 2px solid #ff7b00;
+ cursor: pointer;
+}
+
+.net:active {
+  box-shadow: 0px 3.5px rgb(0, 0, 0);
+}
+
+.sugerencia {
+	font-family: Arial, Helvetica, sans-serif;
+	box-sizing: border-box;
+	margin: 10px;
+	color: rgb(255, 255, 255);
+	text-align: center;
+	font-size: 25px;
+	text-shadow: 3px 3.5px 0 #000;
+}
+
+form {
+	width: 30%;
+	background: #70b3ff98;
+	border: 1px solid #000000;
+	margin: 5px;
+	padding: 20px;
+	float: left;
+}
+
+label {
+	font-size: 15px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	display: block;
+	width: 100%; /* abarca todo el documento, porque ahora es de tipo "bloque" (bloque: abarca todo la pantalla de izquierda a derecha) */
+    
+}
+
+input[type="radio"] {
+    margin-bottom: 25px;
+    width: 8%;
+    padding: 20px; /* le agregamos un espaciado interno entre el texto y caja */
+  }
+
+input,
+textarea {
+	/* al poner la "coma (,)" tambien se le aplica tanto al "input" y "textarea" lo cual van a compatir los mismos estilos*/
+	margin-bottom: 5px;
+	width: 100%;
+	padding: 5px; /* le agregamos un espaciado interno entre el texto y caja */
+	/* propiedad "box-sizing": le decimos que va a tener el 100% sin contar el padding  */
+	box-sizing: border-box;
+	border: 1px solid #000 0.5; /* cambiar el borde a los inputs */
+}
+
+/* PSEUDO-SELECTOR */
+/* con el pseudo-selector "FOCUS" vamos a detectar cuando el usuario este seleccionando un "input"
+y esto a la vez cambiara el color del borde del "input"*/
+input:focus,
+textarea:focus {
+	/*al ponerle (,) tambien le estamos dando un "focus" a "textarea"*/
+	border: 0.5px solid #1668c4;
+}
+
+textarea {
+	resize: vertical; /* vamos a decirle si va a poder cambiarle el tamaño al textarea */
+	/* resize: horizontal, solo seria de forma horizontal el cambio de tamaño
+                         both: hacia ambos lados
+                         vertical: de forma vertical*/
+	max-height: 300px; /* su altura maxima sera de 300px para alargar el textarea */
+	min-height: 100px; /* 100px para la altura minima del textarea */
+}
+
+/* USAREMOS UN "SELECTOR AVANZADO" */
+
+input[type="submit"] {
+	/* todo los imput que tengan el atributo "type" y el valor "submit" --- "type = submit" van a tener
+                           el siguiente valor*/
+	/* NOTA: la declaracion tiene que estar pegada (junta) --- input[type="submit"]*/
+
+	margin-bottom: 0; /* el espaciado que abarcaba se soluciona */
+	background: #1668c4;
+	color: #fff;
+	border: none; /* le quitamos el borde al boton "submit" */
+}
+
+/* CREANDO UN BOTON AVANZADO */
+
+input[type="submit"]:hover {
+	/* agregamos la pseudo-clase "HOVER" */
+	background: #4a88f4;
+	cursor: pointer; /* con "CURSOR:POINTER" tu modificas que cursor se va a mostrar */
+	/* para hacer parecer un boton que podemos clickear en la pagina web */
+}
+
+/* CONFIGURAR EL "FOOTER (PIE DE PAGINA) con estilos " */
+
+footer {
+	background: #000;
+	color: #fff;
+	/* vamos a arreglar el "FOOTER" que abarca todo el documento aplicando un caracteristica llamada "clear" */
+	/* los "float: left dejan un rastro que afecta a los elementos anteriores como siguientes de esta propiedad, pero con: "clear:both" limpia esos ratros
+                 para que se solucione y... */
+	clear: both; /* pues "clear:both" nos ayuda limpiar los "float left" (rastros) lo cual tambien le dara un salto de linea para que se centre en el documento
+                    y con "clear:both" estamos rspetando todo el tamaño del documento*/
+	padding: 10px 0px; /* 10px hacia arriba-abajo y 0px de izquierda-derecha */
+	text-align: center; /* centramos el "FOOTER" en el documento*/
+}

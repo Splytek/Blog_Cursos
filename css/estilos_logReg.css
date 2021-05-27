@@ -1,0 +1,89 @@
+* {
+ padding: 0px;
+ margin: 0px;
+ box-sizing: border-box; /*e dice al navegador tomar en cuenta para cualquier valor que se especifique de borde o de relleno para el ancho o alto de un elemento.*/
+}
+
+/* body{
+    background-color: #fff;
+    background-image: url();
+
+} */
+
+.slearning {
+    font-family: Arial;
+    font-size: 25px;
+    /*text-transform: uppercase;*/ /*CONVIERTE LAS LETRA EN MAYUSCULAS*/
+    text-align: center; /*CENTRAR etiqueta h1*/
+    margin-top: 35px;
+}
+
+.titulo_login{
+
+    margin: 25px 0px 25px 0px;
+
+}
+
+.login {
+
+    height: 350px;
+    width: 350px;
+    padding: 10px;
+    margin-top: 50px;
+    margin-left: 500px;
+    background-color: #ABEBC6;
+    
+    /*margin: auto; /*Puse "auto" para que se centre automaticamente*/
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 2px solid #000;
+    border-radius: 10px;
+
+}
+
+.contenido {
+
+    position: relative;
+    
+
+}
+
+label {
+
+    position: absolute;
+    left: 25px;
+    font-weight: bold;
+}
+
+input[type="text"] {
+    
+     height: 10px;
+     width: 85%;
+     padding: 10px;    
+     margin-bottom: 15px;
+     font-family: Arial, Helvetica, sans-serif;
+     font-size: large;
+
+}
+
+input[type="submit"]{
+
+    padding: 7px;
+    margin-top: 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+
+    background: rgb(101, 166, 192);
+
+}
+
+
+.crear_cuenta { /*concatenar la "class" con la etiqueta <p></p>*/
+
+    margin-top: 30px;
+
+}

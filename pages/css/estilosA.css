@@ -1,0 +1,170 @@
+/*HOJA DE ESTILO PARA LA PAGINA ARDUINO*/
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: #f3f8f7;
+	background-image: url(https://images.pexels.com/photos/950241/pexels-photo-950241.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+}
+
+p{
+    margin: 0;
+	padding: 0;
+}
+
+h2 {
+	margin: 5px;
+}
+
+header,
+.main,
+footer {
+	width: 100%;
+	margin: 15px auto;
+	max-width: 1000px;
+}
+
+.main .articles {
+	width: 62.5%;
+	margin-right: 2%;
+	float: left;
+}
+
+.main .articles .p_Arduino {
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: #ff8000;
+	padding: 15px;
+	max-width: 720px;
+	background: #ffffff8e;
+	border: 1px solid grey;
+	margin-bottom: 15px;
+	display: inline-block;
+}
+
+header nav {
+	background: rgb(42, 113, 194);
+	overflow: hidden;
+}
+
+header nav ul li {
+	list-style: none;
+}
+
+.nav1 > li {
+	float: left;
+}
+
+.nav1 li a {
+	background-color: rgb(42, 113, 194);
+	color: #f3f8f7;
+	font-family: Arial, Helvetica, sans-serif;
+	text-decoration: none;
+	padding: 15px 15px;
+	height: 15px;
+	/*margin: 2px;*/
+	display: block;
+}
+
+.nav1 li a:hover {
+	background-color: #ff8000;
+	/*margin-top: -1px;*/
+}
+
+.nav1 li ul {
+	/*con display: none desaparecemos los submenus y...*/
+	display: none;
+	position: absolute;
+	min-width: 140px;
+}
+
+.nav1 li:hover > ul {
+	/*con display: block y hover aparecemos los submenus*/
+	display: block;
+}
+
+.nav1 li a:active {
+	box-shadow: 1px 1px 5px 1px #000;
+}
+
+.nav1 li ul li {
+	position: relative;
+}
+
+.nav1 li ul li ul {
+	right: -140px;
+	top: 0px;
+}
+
+.inicio {
+	float: left;
+}
+
+.subT{
+	border: 5px;
+	font-size: 45px;
+	margin-bottom: 10px;
+
+}
+
+/*p {
+	white-space: pre-line;
+}*/
+
+/* ESPECIFICAR EL TAMAÑO DEL "ASIDE" */
+aside {
+	width: 34%; /* le ponemos del 30% que asi sume con el 70% de la clase ".articles" un 100% de todo el tamaño de nuestro documento (elemento padre)*/
+	background: #fff; /* color de fondo de la caja del "aside"*/
+	/* NOTA: con float:left: estamos apilando/poniendo las columnas hacia la izquierda */
+	/*padding: 20px; /* es un padding interno, que hace que el contenedor se mas grande (mas del 30% predeterminado) y lo desplace hacia abajo, pero...usamos:
+                   "box-sizing: border-box" para solucionarlo*/
+	border: 1px solid #000;
+	margin: 0px;
+	padding: 5px;
+	margin-bottom: 25px;
+    /*position: relative;*/
+    overflow: hidden;
+	/*box-sizing: border-box;*/
+}
+
+/*.social {
+   /*display: grid;
+   grid-template-columns: repeat(3,1fr);
+}*/
+
+aside .social ol {
+
+	list-style: none; /*quitar numeracion y estilos predeterminados*/
+
+}
+
+.social img {
+	width: 95%;
+	margin: 2px;
+}
+
+.net{
+	width: 100%;
+	margin: 3.5px;
+}
+
+.net:hover{
+ border: 2px solid #ff7b00;
+ cursor: pointer;
+}
+
+.net:active {
+  box-shadow: 0px 3.5px rgb(0, 0, 0);
+}
+
+
+footer {
+	background: #000;
+	color: #f3f8f7;
+	clear: both;
+	padding: 10px 0px;
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+}
