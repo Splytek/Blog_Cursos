@@ -54,9 +54,12 @@ if( isset($_POST['username']) && isset($_POST['password']) ){
     <br><input type="text" name="username" required></br> 
     <label>Contraseña</label>
     <br><input type="text" name="password" required></br>
-    <input type="submit" value="Iniciar sesion">
+    <input type="submit" value="Registrarse">
+    <!-- VALUE muestra el valor de input:submit -->
     </div>
     <div class="crear_cuenta"><a href="login.php">Regresar a Inicio</a><div>
+
+    <!--  -->
 
   </form> 
  </div>

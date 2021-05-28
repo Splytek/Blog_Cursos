@@ -15,8 +15,8 @@ session_start();
 // }
 
 //SENTENCIA(CONSULTA) Y EJECUCION PARA CONTAR LA VISITAS QUE SE HAN HECHO A PAGINAS ESPECIFICAS
-/*$query = $conexion->prepare("UPDATE contador SET visitas=visitas+1 WHERE id = 1"); //PREPARAMOS LA EJECUCION
-$query->execute(); //EJECUTAMOS LA SENTENCIA(CONSULTA)*/
+/* $query = $conexion->prepare("UPDATE contador SET visitas=visitas+1 WHERE id = 1"); //PREPARAMOS LA EJECUCION
+$query->execute(); //EJECUTAMOS LA SENTENCIA(CONSULTA) */
 
 /* //SESION DE ERROR
 if(isset($_SESSION['rol'])){ //Mi sesion se va identificar con "rol"
